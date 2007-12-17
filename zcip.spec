@@ -12,7 +12,6 @@ Patch1:		zcip-4-gcc3.patch
 License:	MIT
 Group:		System/Configuration/Networking
 URL:		http://zeroconf.sourceforge.net/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}buildroot
 BuildRequires:	libnet1.0.2-static-devel libpcap-devel glibc-static-devel
 
 %description
