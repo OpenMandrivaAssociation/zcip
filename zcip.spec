@@ -1,6 +1,6 @@
 %define	name	zcip
 %define	version	4
-%define	release %mkrel 8
+%define	release %mkrel 9
 
 Summary:	Ad-hoc link-local IP autoconfiguration
 Name:		%{name}
@@ -9,6 +9,7 @@ Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		zcip-4-alias.patch
 Patch1:		zcip-4-gcc3.patch
+Patch2:     zcip-4-help.patch 
 License:	MIT
 Group:		System/Configuration/Networking
 URL:		http://zeroconf.sourceforge.net/
@@ -24,6 +25,7 @@ link-local addresses".
 %setup -q
 %patch0 -p1 -b .alias
 %patch1 -p1 -b .gcc3
+%patch2 -p0
 
 %build
 %make CFLAGS="$RPM_OPT_FLAGS -DSTORAGE_DIR=\\\"%{_localstatedir}/zcip\\\""
