@@ -28,13 +28,13 @@ link-local addresses".
 %patch2 -p0
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS -DSTORAGE_DIR=\\\"%{_localstatedir}/zcip\\\""
+%make CFLAGS="$RPM_OPT_FLAGS -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\""
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -m755 zcip -D %{buildroot}/sbin/zcip
 install -m644 zcip.8 -D %{buildroot}%{_mandir}/man8/zcip.8
-mkdir -p %{buildroot}%{_localstatedir}/zcip
+mkdir -p %{buildroot}%{_localstatedir}/lib/zcip
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README draft-ietf-zeroconf-ipv4-linklocal-07.txt Changelog Copyright TODO
 /sbin/*
 %{_mandir}/man8/*
-%{_localstatedir}/zcip
+%{_localstatedir}/lib/zcip
 
 
