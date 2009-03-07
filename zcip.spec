@@ -10,6 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		zcip-4-alias.patch
 Patch1:		zcip-4-gcc3.patch
 Patch2:     zcip-4-help.patch 
+Patch3:     zcip-4-format_string.patch
 License:	MIT
 Group:		System/Configuration/Networking
 URL:		http://zeroconf.sourceforge.net/
@@ -26,6 +27,7 @@ link-local addresses".
 %patch0 -p1 -b .alias
 %patch1 -p1 -b .gcc3
 %patch2 -p0
+%patch3 -p0
 
 %build
 %make CFLAGS="$RPM_OPT_FLAGS -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\""
