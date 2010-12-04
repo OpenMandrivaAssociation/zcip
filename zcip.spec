@@ -15,7 +15,8 @@ License:	MIT
 Group:		System/Configuration/Networking
 URL:		http://zeroconf.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}buildroot
-BuildRequires:	libnet1.0.2-static-devel libpcap-devel glibc-static-devel
+BuildRequires: net1.0-devel
+BuildRequires: libpcap-devel
 
 %description
 This is an implementation of the ad-hoc link-local IP autoconfiguration
@@ -30,7 +31,7 @@ link-local addresses".
 %patch3 -p0
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\""
+%make CFLAGS="%optflags -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\"" LDFLAGS="%ldflags"
 
 %install
 rm -rf $RPM_BUILD_ROOT
