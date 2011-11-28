@@ -1,6 +1,6 @@
 %define	name	zcip
 %define	version	4
-%define	release %mkrel 13
+%define	release %mkrel 14
 
 Summary:	Ad-hoc link-local IP autoconfiguration
 Name:		%{name}
