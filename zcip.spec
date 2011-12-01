@@ -34,13 +34,13 @@ link-local addresses".
 %make CFLAGS="%optflags -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\"" LDFLAGS="%ldflags"
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 install -m755 zcip -D %{buildroot}/sbin/zcip
 install -m644 zcip.8 -D %{buildroot}%{_mandir}/man8/zcip.8
 mkdir -p %{buildroot}%{_localstatedir}/lib/zcip
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
