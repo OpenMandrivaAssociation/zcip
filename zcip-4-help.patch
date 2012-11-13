@@ -1,0 +1,39 @@
+Index: zcip.c
+===================================================================
+--- zcip.c
++++ zcip.c	2008-02-11 11:31:55.000000000 +0100
+@@ -1282,20 +1282,20 @@
+ 
+ 
+ void usage(int exit_code) {
+-    printf("usage: zcip [OPTIONS]\
+-Zeroconf IPv4 Link-Local Address Configuration\
+-OPTIONS:\
+-    -h, --help               Print this help, and exit.\
+-    -i, --interface IFNAME   Use interface IFNAME.\
+-                             If not provided it uses 'eth0'.\
+-    -r, --randseed           Seeds RNG with random # rather than MAC address.\
+-    -s, --syslog             Output to syslog instead of stdout.\
+-    -v, --version            Print the version information, and exit.\
+-\
+-This program does the ad-hoc link-local IPv4 auto-configuration trick, as\
+-described in the IETF Internet Draft 'Dynamic Configuration of IPv4\
+-Link-Local Addresses'.\
+-");
++    printf("usage: zcip [OPTIONS]\n"
++"Zeroconf IPv4 Link-Local Address Configuration\n"
++"OPTIONS:\n"
++"    -h, --help               Print this help, and exit.\n"
++"    -i, --interface IFNAME   Use interface IFNAME.\n"
++"                             If not provided it uses 'eth0'.\n"
++"    -r, --randseed           Seeds RNG with random # rather than MAC address.\n"
++"    -s, --syslog             Output to syslog instead of stdout.\n"
++"    -v, --version            Print the version information, and exit.\n"
++"\n"
++"This program does the ad-hoc link-local IPv4 auto-configuration trick, as\n"
++"described in the IETF Internet Draft 'Dynamic Configuration of IPv4\n"
++"Link-Local Addresses'.\n"
++);
+ 
+     exit (exit_code);
+ }

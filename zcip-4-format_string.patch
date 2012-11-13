@@ -1,0 +1,44 @@
+Index: make-arp.c
+===================================================================
+--- make-arp.c
++++ make-arp.c	2009-03-07 02:05:34.000000000 +0100
+@@ -43,7 +43,7 @@
+ 
+     if (output_to_syslog) {
+         vsnprintf(buffer, sizeof(buffer), format, args);
+-        syslog(LOG_ERR, buffer);
++        syslog(LOG_ERR, "%s", buffer);
+     } else {
+         vprintf(format, args);
+     }
+@@ -64,7 +64,7 @@
+ 
+     if (output_to_syslog) {
+         vsnprintf(buffer, sizeof(buffer), format, args);
+-        syslog(LOG_INFO, buffer);
++        syslog(LOG_INFO, "%s", buffer);
+     } else {
+         vprintf(format, args);
+     }
+Index: zcip.c
+===================================================================
+--- zcip.c
++++ zcip.c	2009-03-07 02:07:07.000000000 +0100
+@@ -96,7 +96,7 @@
+ 
+     if (output_to_syslog) {
+         vsnprintf(buffer, sizeof(buffer), format, args);
+-        syslog(LOG_ERR, buffer);
++        syslog(LOG_ERR, "%s", buffer);
+     } else {
+         vprintf(format, args);
+     }
+@@ -117,7 +117,7 @@
+ 
+     if (output_to_syslog) {
+         vsnprintf(buffer, sizeof(buffer), format, args);
+-        syslog(LOG_INFO, buffer);
++        syslog(LOG_INFO, "%s", buffer);
+     } else {
+         vprintf(format, args);
+     }
