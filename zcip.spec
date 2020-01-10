@@ -20,7 +20,7 @@ link-local addresses".
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %make CFLAGS="%optflags -DSTORAGE_DIR=\\\"%{_localstatedir}/lib/zcip\\\"" LDFLAGS="%ldflags"
