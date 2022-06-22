@@ -1,7 +1,7 @@
 Summary:	Ad-hoc link-local IP autoconfiguration
 Name:		zcip
 Version:	4
-Release:	26
+Release:	27
 License:	MIT
 Group:		System/Configuration/Networking
 Url:		http://zeroconf.sourceforge.net/
