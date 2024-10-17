@@ -4,7 +4,7 @@ Version:	4
 Release:	28
 License:	MIT
 Group:		System/Configuration/Networking
-Url:		http://zeroconf.sourceforge.net/
+Url:		https://zeroconf.sourceforge.net/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		zcip-4-alias.patch
 Patch1:		zcip-4-gcc3.patch
