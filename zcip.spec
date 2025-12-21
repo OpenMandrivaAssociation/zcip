@@ -10,6 +10,7 @@ Patch0:		zcip-4-alias.patch
 Patch1:		zcip-4-gcc3.patch
 Patch2:		zcip-4-help.patch 
 Patch3:		zcip-4-format_string.patch
+BuildRequires:	make
 BuildRequires:	pkgconfig(libpcap)
 BuildRequires:	net1.0.2-devel
 
